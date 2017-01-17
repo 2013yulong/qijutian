@@ -587,6 +587,7 @@ a{
 img.logo {
     height: 50px;
     float: left;
+    margin-right: 5px;
 }
 .right a{
 	font-size: 14px;
@@ -627,5 +628,7 @@ p.g_link.paramName {
     line-height: 25px;
     font-weight: bold;
 }
-
+.logo-content {
+    margin-bottom: 10px;
+}
 
