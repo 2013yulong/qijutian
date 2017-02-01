@@ -631,4 +631,11 @@ p.g_link.paramName {
 .logo-content {
     margin-bottom: 10px;
 }
-
+.hongbao {
+	margin-top: 5px;
+}
+.hongbao a{
+	width: 300px;
+	color: #fff;
+	background-color: #ff5e00;
+}

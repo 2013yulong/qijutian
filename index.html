@@ -626,6 +626,9 @@
                 <a  href="tel:15038933299">一键呼叫</a>
                 <a  href="sms:15038933299">一键短信</a>
               </div>
+              <div class="technicalSupport hongbao" id="hongbao">
+                <a  href="down/hongbao.apk">一键下载万能抢红包软件</a>
+              </div>
             </div>
           </div>
         </div>
@@ -1388,7 +1391,98 @@
       } else {
         Mobi.logDog(200055, 0);
       }
-
+      // ------微信分享------------
+      var wechat={
+  getWechatConfig : function () {
+    $.ajax({
+      type: 'get',
+      url: 'http://3g.k.sohu.com/api/usercenter/getWeiXinJsSign.go',
+      cache: false,
+      success: function (res) {
+        console.log('shareon:\n', res)
+        if (!!res && wx) {
+          wx.config({
+            debug: false,
+            appId: res.appId,
+            timestamp: res.timestamp,
+            nonceStr: res.nonceStr,
+            signature: res.nonceStr,
+            jsApiList: ["onMenuShareTimeline", "onMenuShareAppMessage", "onMenuShareQQ", "onMenuShareWeibo"]
+          })
+        }
+      }
+    });
+  },
+  getShareon : function (shareUrl, data) {
+    $.ajax({
+      type: 'get',
+      url: shareUrl,
+      data: data,
+      cache: false,
+      success: function (shareData) {
+        console.log('shareon:\n', shareData)
+        if (wx) {
+          wx.ready(function () {
+            // 兼容方案 如果 shareon 挂掉了,使用默认图片
+            var imagesUrl = shareData.WeiXinMoments.pics[0] || 'mfarm_files/qjt_logo.png';
+            wx.onMenuShareTimeline({
+              title: shareData.WeiXinMoments.content, // 分享标题
+              link: shareData.WeiXinMoments.link, // 分享链接
+              imgUrl: imagesUrl,
+              success: function () {
+                // 用户确认分享后执行的回调函数
+              },
+              cancel: function () {
+                // 用户取消分享后执行的回调函数
+              }
+            });
+            wx.onMenuShareAppMessage({
+              title: shareData.WeiXinChat.title, // 分享标题
+              desc: shareData.WeiXinChat.content, // 分享描述
+              link: shareData.WeiXinChat.link, // 分享链接
+              imgUrl: shareData.WeiXinChat.pics[0], // 分享图标
+              type: '', // 分享类型,music、video或link，不填默认为link
+              dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+              success: function () {
+                // 用户确认分享后执行的回调函数
+              },
+              cancel: function () {
+                // 用户取消分享后执行的回调函数
+              }
+            });
+            wx.onMenuShareQQ({
+              title: shareData.QQChat.title, // 分享标题
+              desc: shareData.QQChat.content, // 分享描述
+              link: shareData.QQChat.link, // 分享链接
+              imgUrl: shareData.QQChat.pics[0], // 分享图标
+              success: function () {
+                // 用户确认分享后执行的回调函数
+              },
+              cancel: function () {
+                // 用户取消分享后执行的回调函数
+              }
+            });
+            wx.onMenuShareWeibo({
+              title: shareData.Weibo.title, // 分享标题
+              desc: shareData.Weibo.content, // 分享描述
+              link: shareData.Weibo.link, // 分享链接
+              imgUrl: shareData.Weibo.pics[0], // 分享图标
+              success: function () {
+                // 用户确认分享后执行的回调函数
+              },
+              cancel: function () {
+                // 用户取消分享后执行的回调函数
+              }
+            });
+          });
+          wx.error(function (res) {
+            // console.log(res);
+          });
+        }
+      }
+    });
+  }
+}
       wx.onMenuShareAppMessage({
               title: '齐聚田',//shareData.WeiXinChat.title, // 分享标题
               desc: '齐聚田网络家庭农场，致力于用作物产品以及衍生化产品的研究工作，欢迎收藏关注，欢迎咨询与合作...',//shareData.WeiXinChat.content, // 分享描述
