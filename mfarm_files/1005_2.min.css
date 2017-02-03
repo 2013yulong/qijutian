@@ -605,7 +605,7 @@ img.logo {
     text-decoration: none;
     padding: 10px;
     background: #f0f9e1;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 .technicalSupport {
     padding: .3rem 0;
@@ -638,4 +638,27 @@ p.g_link.paramName {
 	width: 300px;
 	color: #fff;
 	background-color: #ff5e00;
+	border-bottom-left-radius: 80px;
+    border-top-right-radius: 80px;
 }
+
+.go-grab-down {
+    color: #fff;
+    background-color: #ff5e00;
+    display: inline-block;
+    padding: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 81px;
+    position: fixed;
+    bottom: 36px;
+    right: 0;
+    z-index: 10000;
+}
+.go-grab-down a{
+	color: #fff;
+	font-size: 15px;
+}
+.go-grab-down a sub{
+	font-size: 8px;
+}
+
