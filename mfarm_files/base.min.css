@@ -70,6 +70,9 @@ img {
 input[type="radio"],input[type="checkbox"] {
 	vertical-align: -2px
 }
+.middleCenter.middleCenter301 {
+    text-align: center;
+}
 .swiper-container img{
 	height: 210px;
 	width: 100%
