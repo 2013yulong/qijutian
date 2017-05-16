@@ -2477,7 +2477,7 @@ input[type="radio"],input[type="checkbox"] {
 	display: table-cell;
 	vertical-align: middle;
 	padding: 0;
-	padding-left: .5rem
+	/*padding-left: .5rem*/
 }
 
 .tableBox .tableCell-30 {
