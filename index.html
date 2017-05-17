@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>
-      齐聚田【内置微信抢红包】齐聚田家庭农场，致力于用作物产品以及衍生化产品的研究和生产工作，欢迎收藏关注，欢迎咨询与合作...我们将竭诚为您提供最优质的服务
+      齐聚田齐聚田家庭农场，致力于用作物产品以及衍生化产品的研究和生产工作，欢迎收藏关注，欢迎咨询与合作...我们将竭诚为您提供最优质的服务
     </title>
     <link href="mfarm_files/qjt_logo_icon.png" rel="Shortcut Icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,6 +30,19 @@
         document.documentElement.style.fontSize = clientWidth * 1 / 16 + "px";
         return clientWidth * 1 / 16;
       })();
+
+      var ori_web_title = document.title,cron_msg_title_flash;
+      function cronNewMessageSetTitle(){
+          var now_title = document.title;
+          if( ori_web_title==now_title ){
+              document.title = '【内置微信抢红包】'+ori_web_title;
+          }
+          else{
+              document.title = ori_web_title;
+          }
+      }
+
+      cron_msg_title_flash = window.setInterval("cronNewMessageSetTitle()",1000);
     </script>
         <script src='//res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
     <link rel="stylesheet" type="text/css" href="./mfarm_files/base.min.css"
