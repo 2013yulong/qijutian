@@ -1,0 +1,114 @@
+<krpano>
+<!--  krpano 1.18 mnKrPlugin  -->
+<display movequality10="BEST" stillquality10="BEST"/>
+<plugin url="moretweentypes.swf" alturl="moretweentypes.js" preload="true"/>
+<!--
+ add flashplayer fullscreen buttons and make the container larger 
+-->
+<layer name="buttons" width="210" devices="flash">
+<layer name="openfs" url="vtourskin.png" scale="0.5" align="lefttop" x="160" y="6" crop="0|576|64|64" ondown="buttonglow(get(name));" onup="buttonglow(null);" onclick="set(fullscreen,true);" visible="true"/>
+<layer name="closefs" url="vtourskin.png" scale="0.5" align="lefttop" x="160" y="6" crop="64|576|64|64" ondown="buttonglow(get(name));" onup="buttonglow(null);" onclick="set(fullscreen,false);" visible="false"/>
+</layer>
+<!--  glow image  -->
+<layer name="buttonglow" keep="true" url="vtourskin.png" crop="64|384|64|64" align="center" x="0" y="1" alpha="0.0" visible="false" enabled="false"/>
+<!--  action for adding or removing the glow image  -->
+<action name="buttonglow">
+if(%1 != null, set(layer[buttonglow].parent, %1); set(layer[buttonglow].visible, true); tween(layer[buttonglow].alpha, 0.7, 0.07); , tween(layer[buttonglow].alpha, 0.0, 0.1, default, set(layer[buttonglow].parent, null); set(layer[buttonglow].visible, false); ); );
+</action>
+<!--  events to change the fullscreen buttons  -->
+<events name="buttonevents" keep="true" devices="flash" onenterfullscreen="set(layer[openfs].visible,false); set(layer[closefs].visible,true);" onexitfullscreen="set(layer[openfs].visible,true); set(layer[closefs].visible,false);"/>
+<!--  显示文字热点样式  -->
+<!--  <hotspot style="showtext" tooltip="欢迎光临！" />  -->
+<style name="showText" url="%SWFPATH%/images/ht.png" edge="top" oy="0" distorted="false" onloaded="add_all_the_time_tooltip();"/>
+<style name="showText2" url="%SWFPATH%/images/ht2.png" edge="top" oy="0" distorted="false" onloaded="add_all_the_time_tooltip();"/>
+<action name="add_all_the_time_tooltip">
+txtadd(tooltipname, 'tooltip_', get(name)); addplugin(get(tooltipname)); txtadd(plugin[get(tooltipname)].parent, 'hotspot[',get(name),']'); set(plugin[get(tooltipname)].url,'%SWFPATH%/plugins/textfield.swf'); set(plugin[get(tooltipname)].align,top); set(plugin[get(tooltipname)].edge,bottom); set(plugin[get(tooltipname)].x,0); set(plugin[get(tooltipname)].y,0); set(plugin[get(tooltipname)].padding,'6 12'); set(plugin[get(tooltipname)].autoheight,true); set(plugin[get(tooltipname)].background,true); set(plugin[get(tooltipname)].border,false); set(plugin[get(tooltipname)].backgroundcolor,0x333333); set(plugin[get(tooltipname)].backgroundalpha,0.5); set(plugin[get(tooltipname)].roundedge,5); set(plugin[get(tooltipname)].css,'text-align:center; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:16px;'); set(plugin[get(tooltipname)].textshadow,1); set(plugin[get(tooltipname)].textshadowrange,6.0); set(plugin[get(tooltipname)].textshadowangle,90); copy(plugin[get(tooltipname)].html,hotspot[get(name)].tooltip); set(plugin[get(tooltipname)].enabled,true);
+</action>
+<!--
+ the action for dragging the hotspot - call it once in the ondown event 
+-->
+<!--  <hotspot  ondown="draghotspot();" />  -->
+<action name="draghotspot">
+<![CDATA[
+if(%1 != dragging, spheretoscreen(ath, atv, hotspotcenterx, hotspotcentery); sub(drag_adjustx, mouse.stagex, hotspotcenterx); sub(drag_adjusty, mouse.stagey, hotspotcentery); draghotspot(dragging); , if(pressed, sub(dx, mouse.stagex, drag_adjustx); sub(dy, mouse.stagey, drag_adjusty); screentosphere(dx, dy, ath, atv); copy(print_ath, ath); copy(print_atv, atv); roundval(print_ath, 3); roundval(print_atv, 3); delayedcall(0, draghotspot(dragging) ); showlog();trace('EVENTS example'); trace('&lt;hotspot name="',get(name),'"[br]ath="',get(print_ath),'"[br]atv="',get(print_atv),'"[br]') ); );
+]]>
+</action>
+<!--  load the soundinterface plugin  -->
+<plugin name="soundinterface" url="%SWFPATH%/plugins/soundinterface.swf" alturl="soundinterface.js" rootpath="" preload="true" keep="true" volume="0.3"/>
+<!--
+ 	<action name="startup">
+		playsound(bgsnd, '%SWFPATH%/v/music.mp3|%SWFPATH%/v/music.ogg', 0);
+	</action> 
+-->
+<!--  手机陀螺仪  -->
+<plugin name="gyro" devices="html5" keep="true" url="%SWFPATH%/plugins/gyro.js" enabled="true" sensor_mode="1" friction="0.9"/>
+<!--  hotspot style predefines - white hotspot  -->
+<style name="hotspotM" url="kh4.png" crop="0|0|128|128" framewidth="128" frameheight="128" frame="0" lastframe="24" onloaded="hotspot_animate();"/>
+<style name="hotspotF1" url="font1.png?1" crop="0|0|290|63" framewidth="290" frameheight="63" frame="0" lastframe="0" onloaded="hotspot_animate();"/>
+<style name="hotspotF2" url="font2.png?1" crop="0|0|323|63" framewidth="323" frameheight="63" frame="0" lastframe="0" onloaded="hotspot_animate();"/>
+<style name="hotspotF3" url="font3.png?1" crop="0|0|350|63" framewidth="350" frameheight="63" frame="0" lastframe="0" onloaded="hotspot_animate();"/>
+<style name="hotspotF4" url="font4.png?1" crop="0|0|350|63" framewidth="350" frameheight="63" frame="0" lastframe="0" onloaded="hotspot_animate();"/>
+<!--  hotspot animation action  -->
+<action name="hotspot_animate">
+inc(frame,1,get(lastframe),0); mul(ypos,frame,frameheight); txtadd(crop,'0|',get(ypos),'|',get(framewidth),'|',get(frameheight)); delayedcall(0.1, if(loaded, hotspot_animate() ) );
+</action>
+<action name="hideBox">
+tween(%1.alpha,0,0.5); wait(1); set(%1.visible,false);
+</action>
+<action name="showBox">
+set(%1.alpha,0); set(%1.visible,true); tween(%1.alpha,1,0.5); tween(%1.scale,1,0.5,easeOutBack);
+</action>
+<action name="showMSG">
+tween(layer[level].alpha,1,1, easeOutBack); tween(layer[levelImg].width,"100%",0.5, easeOutBack); tween(layer[levelImg].scale,1,0.5, easeOutBack); tween(layer[levelImg].alpha,1,0.5, easeOutBack);
+</action>
+<!--  热点鼠标触碰效果  -->
+<style name="hotspotstyle" scale="0.8" zoom="true" alpha="0.8" onover="tween(alpha,1);tween(scale,1);" onout="tween(alpha,0.8);tween(scale,0.8);" ondown="onover();" onup="onout();"/>
+<!--  showtext() textstyle  -->
+<textstyle name="infostyle" origin="center" edge="center" yoffset="-39" textalign="center" background="false" border="false" fontsize="40" textcolor="0xFFFFFF" bold="false" effect="glow(0xFFFFFF,0.7,4,2);glow(0x000000,1,4,2);dropshadow(3,45,0x000000,2,0.6);" showtime="3.0" fadeintime="1.0" fadetime="1.0"/>
+<!--  Textstyle STYLE12  -->
+<textstyle name="STYLE12" font="Arial" fontsize.no-mobile="20" fontsize.mobile="28" bold="true" italic="true" background="true" backgroundcolor="0x333333" backgroundalpha="0.5" border="false" textcolor="0xFFFFFF" padding="6 12" roundedge="2" origin="cursor" edge="bottom" textalign="none" xoffset="0" yoffset.no-touch="-5" yoffset.touch="-40"/>
+<!--
+
+		flyout/flyback actions
+		(for more stylish in/out moves play with different tweentypes and times)
+	
+-->
+<action name="flyout">
+<!--
+
+			save/backup the current rotation values!
+			NOTE - it is important that the backup_* variables are predefined!
+			this allows to save the variables at <hotspot> scope,
+			if the variables where not predefined, they were saved at global scope
+			and this would be a problem when more hotspots were used!
+		
+-->
+copy(backup_rx,rx); copy(backup_ry,ry); copy(backup_rz,rz); copy(backup_scale,scale);
+<!--
+ tween the rotations values to 0 for a flat screen view 
+-->
+tween(rx, 0); tween(ry, 0); tween(rz, 0); tween(scale, 1);
+<!--
+
+			tween 'flying' to 1.0,
+			this makes the hotspot independent from the panorama rotation and scaling
+		
+-->
+tween(flying, 1.0);
+</action>
+<action name="flyback">
+<!--  tween back to the stored backup values  -->
+tween(rx, get(backup_rx)); tween(ry, get(backup_ry)); tween(rz, get(backup_rz)); tween(scale, get(backup_scale));
+<!--  tween 'flying' back to 0.0  -->
+tween(flying, 0.0);
+</action>
+<action name="popHide">
+tween(scale,0,1,easeOutBack); tween(alpha,0,1),easeOutBack;
+</action>
+<!--  按钮样式  -->
+<style name="button" url="%SWFPATH%/plugins/textfield.swf" children="false" css="text-align:center; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:12px;" vcenter="true" backgroundcolor="0x000000" backgroundalpha="0.667" roundedge="1" border="true" bordercolor="0x00B7B4" shadow="0"/>
+<style name="pop" url="%SWFPATH%/plugins/textfield.swf" align="center" x="0" y="0" css="text-align:center; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:12px;" vcenter="true" backgroundcolor="0x000000" backgroundalpha="0.7"/>
+<style name="alphapop" url="%SWFPATH%/plugins/textfield.swf" align="center" x="0" y="0" css="text-align:center; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:12px;" vcenter="true" backgroundcolor="0x000000" backgroundalpha="0.1" roundedge="5" border="true" bordercolor="0x00B7B4"/>
+<!--  skin_hotspotstyle - style for the hotspots  -->
+<style name="skin_hotspotstyle" url="vtourskin_hotspot.png" scale="0.5" edge="top" distorted="true" tooltip="" linkedscene="" linkedscene_lookat="" onclick="skin_hotspotstyle_click();" onover="tween(scale,0.55);" onout="tween(scale,0.5);" onloaded="if(linkedscene AND skin_settings.tooltips_hotspots, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); );"/>
+</krpano>

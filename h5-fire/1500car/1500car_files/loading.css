@@ -1,0 +1,12 @@
+/** Created by djkong on 2015/8/21. */
+.netease-loader { position: fixed; top: 0; right: 0; bottom: 0; left: 0; display: block; z-index: 10001; background: #000000; }
+.netease-loader section { position: fixed; left: 0; top: 42%; width: 100%; height: 80px; }
+.netease-loader section article { height: 80px; display: block; margin: auto; position: relative; }
+.netease-loader .load_type { position: absolute; bottom: 0; left: 50%; width: 80px; height: 100%; margin-left: -40px; background: url("l0.png") center no-repeat; -webkit-background-size: contain; background-size: contain; -webkit-animation: l0 1s linear infinite; animation: l0 1s linear infinite; }
+.netease-loader .load_data { position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block; background-size: 100% 100%; font-size: 22px; line-height: 80px; text-align: center; color: #fff; }
+.netease-loader .load_text { position: absolute; top: 105%; width: 120%; height: 50%; display: block; left: -10%; background: url(../image/loading.png) no-repeat center; -webkit-background-size: contain; background-size: contain; }
+
+@-webkit-keyframes l0{0%{-webkit-transform: rotate(0);}100%{-webkit-transform: rotate(360deg);}}
+@keyframes l0{0%{transform: rotate(0);}100%{transform: rotate(360deg);}}
+
+/*# sourceMappingURL=loading.css.map */

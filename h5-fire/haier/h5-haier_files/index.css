@@ -1,0 +1,71 @@
+html, body, div, p, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, input, select, button, textarea, iframe, table, th, td, span{ margin: 0; padding: 0; }
+html,body{ width:100%; height:100%; }
+body { overflow:hidden; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#FFFFFF; background-color:#000000; }
+a, img { -webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单 */ }
+audio{width: 0;height: 0;}
+/*主体部分*/
+.main{ max-width: 640px; height: 100%; position: absolute; left: 0; right: 0; margin: auto; }
+/*视频*/
+.masker{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url(http://go.163.com/2017/0608/haier/images/poster.jpg?1111) no-repeat center;
+    z-index: 100;
+    display: none;
+}
+.btn-play{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    background: url(http://go.163.com/2017/0608/haier/images/btn-play.png) no-repeat;
+}
+.video-box,.page-box { width: 640px; height: 1040px; position: absolute; top: 50%; left: 50%; margin-left:-320px; margin-top:-520px; z-index: 999; background:#000; overflow: hidden; transition: all 0.5; }
+.video-box video { position: absolute;  z-index: 10; }
+/*定帧*/
+.page-box{ z-index: 900; margin-top:-520px; }
+/*首页*/
+.page{ width: 640px; height: 1040px; position: absolute; left: 0; top: 0; display: none; }
+/*全景*/
+#pano{ z-index: 1; width:100%;height:100%; }
+
+
+#infor,#popup{position: absolute;top:0;left: 0;z-index: 100000000;width: 100%;display: none;}
+#popup,#nextLavel{height: 100%; max-width: 640px;overflow: hidden;}
+#infor .lcont{float: left;left:10px;width:17%;}
+#infor .rcont{position: absolute;text-align: right; top:10px;right:10px;height: 46px;width: 100%;}
+.inline{display: inline;}
+.bg,.pcont{position: relative;overflow: hidden;}
+.bg,.bg img,.pcont img{;width: 100%;}
+
+.end{
+    width: 540px;
+    height: 600px;
+    position: absolute;
+    z-index: 1000;
+    top: 470px;
+    left: 50px;
+    display:none;  
+}
+
+.share{
+  position: absolute;
+    width: 640px;
+    height: 239px;
+    left: 0;
+    top: 0;
+    background: url(http://go.163.com/2017/0608/haier/images/share.png) no-repeat center;
+    z-index: 99999;  
+    display:none;
+}
+
+
+
+
