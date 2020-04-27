@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!-- saved from url=(0035)http://m.fkxm17.faisco.cn/index.jsp -->
 <html style="font-size: 23.4375px;">
-  
-  <head>
+
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>
-      【区块链新农业】齐聚田家庭农场，致力于“区块链农业”的研究和发展，重点针对农作物产品以及衍生化产品的研究和生产，欢迎收藏关注，欢迎咨询与合作...我们将竭诚为您提供最优质的服务
+        【云农业，为您定制专属农场和农作物】齐聚田家庭农场，致力于“云服务新农业”的研究和发展，重点针对农作物产品以及衍生化产品的研究和生产，欢迎收藏关注，欢迎咨询与合作...我们将竭诚为您提供最优质的服务
     </title>
     <link href="./mfarm_files/qjt_icon20.png" rel="shortcut icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,59 +22,126 @@
     <meta content="telephone=no" name="format-detection">
     <meta http-equiv="Pragma" content="no-cache">
     <script type="text/javascript">
-      //html root的字体计算应该放在最前面，这样计算就不会有误差了/
-      //2016.3.23 wjq update 之所以要加个判断返回一个20.5，是因为当用户在谷歌等浏览器直接输入手机端网站网址时，如果用户设置模块自定义样式的高度比较小，由于这时候的clientWidth为1920px，及返回的_htmlFontSize为40，这时候就会使模块太小，展示不完全，因此先取一个较为准确的值去展示。Mobi.resetHtmlFontSize()顺便也加了
-      var _htmlFontSize = (function() {
-        var clientWidth = document.documentElement ? document.documentElement.clientWidth: document.body.clientWidth;
+    //html root的字体计算应该放在最前面，这样计算就不会有误差了/
+    //2016.3.23 wjq update 之所以要加个判断返回一个20.5，是因为当用户在谷歌等浏览器直接输入手机端网站网址时，如果用户设置模块自定义样式的高度比较小，由于这时候的clientWidth为1920px，及返回的_htmlFontSize为40，这时候就会使模块太小，展示不完全，因此先取一个较为准确的值去展示。Mobi.resetHtmlFontSize()顺便也加了
+    var _htmlFontSize = (function() {
+        var clientWidth = document.documentElement ? document.documentElement.clientWidth : document.body.clientWidth;
         if (clientWidth > 640) clientWidth = 640;
         document.documentElement.style.fontSize = clientWidth * 1 / 16 + "px";
         return clientWidth * 1 / 16;
-        
-      })();
 
-      var ori_web_title = document.title,cron_msg_title_flash;
-      function cronNewMessageSetTitle(){
-          var now_title = document.title;
-          if( ori_web_title==now_title ){
-              document.title = '【内置微信抢红包】'+ori_web_title;
-          }
-          else{
-              document.title = ori_web_title;
-          }
-      }
+    })();
 
-      cron_msg_title_flash = window.setInterval("cronNewMessageSetTitle()",1000);
+    var ori_web_title = document.title,
+        cron_msg_title_flash;
+
+    function cronNewMessageSetTitle() {
+        var now_title = document.title;
+        if (ori_web_title == now_title) {
+            document.title = '【内置微信抢红包】' + ori_web_title;
+        } else {
+            document.title = ori_web_title;
+        }
+    }
+
+    cron_msg_title_flash = window.setInterval("cronNewMessageSetTitle()", 1000);
     </script>
-        <script src='//res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
-    <link rel="stylesheet" type="text/css" href="./mfarm_files/base.min.css"
-    title="default">
+    <script src='//res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+    <link rel="stylesheet" type="text/css" href="./mfarm_files/base.min.css" title="default">
     <link rel="stylesheet" href="mfarm_files/swiper.css">
-    <link rel="stylesheet" type="text/css" href="./mfarm_files/bannerAnimation.min.css"
-    title="">
+    <link rel="stylesheet" type="text/css" href="./mfarm_files/bannerAnimation.min.css" title="">
     <link rel="stylesheet" id="mobiStyleTemplateCss" type="text/css" href="./mfarm_files/1005_2.min.css">
     <link rel="stylesheet" id="mobiCubeNavigationCss" type="text/css" href="./mfarm_files/cubeNavigation.min.css">
     <meta name="keywords" content="">
     <meta name="description" content="">
     <!-- //输出模块样式css -->
     <style id="mobiStyleModule">
-      #module308 {border:none;} #module308 {padding:0px;} #module308 .formMiddle308{border:none;}
-      #module308 .formMiddle308{padding:0px;} #module308 .formBannerTitle308{border:none;}
-      #module308 .formBannerTitle308{padding:0px;} #module308 {background:none;}
-      #module308 .formMiddle308 {background:none;} #module308 .g_background{background:none;}
-      #module308 .formMiddle308 .formMiddleCenter308{background:none;} #module308
-      .formMiddleContent308{background:none;}
+    #module308 {
+        border: none;
+    }
+
+    #module308 {
+        padding: 0px;
+    }
+
+    #module308 .formMiddle308 {
+        border: none;
+    }
+
+    #module308 .formMiddle308 {
+        padding: 0px;
+    }
+
+    #module308 .formBannerTitle308 {
+        border: none;
+    }
+
+    #module308 .formBannerTitle308 {
+        padding: 0px;
+    }
+
+    #module308 {
+        background: none;
+    }
+
+    #module308 .formMiddle308 {
+        background: none;
+    }
+
+    #module308 .g_background {
+        background: none;
+    }
+
+    #module308 .formMiddle308 .formMiddleCenter308 {
+        background: none;
+    }
+
+    #module308 .formMiddleContent308 {
+        background: none;
+    }
     </style>
     <style id="mobiStyleNav" type="text/css">
-      .open .navItem:nth-child(2) {transition-delay: 160ms;} .open .navItem:nth-child(4)
-      {transition-delay: 240ms;} #navbar_104 .icon-navItemIcon:before{content:'';content:'';}
-      #navbar_104 .icon-navItemIcon{background-image:none;} .open .navItem:nth-child(6)
-      {transition-delay: 320ms;} #navbar_105 .icon-navItemIcon:before{content:'';content:'';}
-      #navbar_105 .icon-navItemIcon{background-image:none;} .open .navItem:nth-child(8)
-      {transition-delay: 400ms;} .open .navItem:nth-child(10) {transition-delay:
-      480ms;}
+    .open .navItem:nth-child(2) {
+        transition-delay: 160ms;
+    }
+
+    .open .navItem:nth-child(4) {
+        transition-delay: 240ms;
+    }
+
+    #navbar_104 .icon-navItemIcon:before {
+        content: '';
+        content: '';
+    }
+
+    #navbar_104 .icon-navItemIcon {
+        background-image: none;
+    }
+
+    .open .navItem:nth-child(6) {
+        transition-delay: 320ms;
+    }
+
+    #navbar_105 .icon-navItemIcon:before {
+        content: '';
+        content: '';
+    }
+
+    #navbar_105 .icon-navItemIcon {
+        background-image: none;
+    }
+
+    .open .navItem:nth-child(8) {
+        transition-delay: 400ms;
+    }
+
+    .open .navItem:nth-child(10) {
+        transition-delay:
+            480ms;
+    }
     </style>
     <style id="mobiCubeStyleModule">
-      #module308{overflow:hidden;} #cubeNavigation308_cubeLink1 .cubeLink_bg{background-color:#128922;background-image:none;filter:(opacity='100');opacity:1.0;}
+        #module308{overflow:hidden;} #cubeNavigation308_cubeLink1 .cubeLink_bg{background-color:#128922;background-image:none;filter:(opacity='100');opacity:1.0;}
       #cubeNavigation308_cubeLink1 .cubeLink_ico{background-image:url(http://mo.faisys.com/image/colIcon/1.png);background-color:transparent;;background-repeat:no-repeat;background-position:
       center;} #cubeNavigation308_cubeLink1 .icon-cube:before{content:none;}
       #cubeNavigation308_cubeLink2 .cubeLink_bg{background-color:#139024;background-image:none;filter:(opacity='100');opacity:1.0;}
@@ -86,345 +153,389 @@
     <style id="mobiSearchStyleModule">
     </style>
     <!-- 系统特殊隐藏栏目隐藏头部、banner -->
-   
-  </head>
-  
-  <body faiscomobi="true" id="g_body" class="g_locale2052 mobiCol3">
+</head>
+
+<body faiscomobi="true" id="g_body" class="g_locale2052 mobiCol3">
     <div class="go-grab-down">
-      <a href="#hongbao">微信红包 <sub>最下面</sub></a>
+        <a href="#hongbao">微信红包 <sub>最下面</sub></a>
     </div>
     <div class="webLeft">
     </div>
     <div id="g_web" class="g_web">
-      <div id="fk-gWebPlaceholdPT" style="height:0px;">
-      </div>
-      <!-- this is loading -->
-      <div id="webLoading" class="loading" style="display:none;">
-        <div id="splashscreen" class="splashscreen ui-loader">
-          <span class="ui-icon ui-icon-loading spin">
-          </span>
+        <div id="fk-gWebPlaceholdPT" style="height:0px;">
         </div>
-      </div>
-      <div id="webTopBox" class="webTopBox  ">
-        <div id="webTop" class="webTop">
-        </div>
-      </div>
-      <div id="webHeaderBox" class="webHeaderBox">
-        <div class="navButton" id="navButton">
-          <div class="navButtonPanel">
-          </div>
-          <div class="menuNav">
-            <div class="menuNavTip icon-menuNavTip">
+        <!-- this is loading -->
+        <div id="webLoading" class="loading" style="display:none;">
+            <div id="splashscreen" class="splashscreen ui-loader">
+                <span class="ui-icon ui-icon-loading spin">
+                </span>
             </div>
-          </div>
         </div>
-        <div id="headerWhiteBg" class="headerSiteMaskWhiteBg" style="height: 2.25rem; display: none;">
+        <div id="webTopBox" class="webTopBox  ">
+            <div id="webTop" class="webTop">
+            </div>
         </div>
-        <div id="headerBg" class="headerSiteMaskBg" style="height: 2.25rem; display: none;">
-        </div>
-        <div id="webHeader" class="webHeader webHeaderBg">
-          <div id="header" class="header" style="padding: 0px;">
-            <span class="pageLogo   " style="display: none; height: 41px; width: 41px;"
-            id="pageLogo" sid="0" pw="160" ph="160">
-            <img class="logo" src="mfarm_files/qjt_logo.png">
-              <!-- <div id="pageLogoImg" class="logoImg " style="background-image:url(http://2.ss.faisys.com/image/no-pic.jpg);background-size: contain;background-position: center;background-repeat: no-repeat;">
+        <div id="webHeaderBox" class="webHeaderBox">
+            <div class="navButton" id="navButton">
+                <div class="navButtonPanel">
+                </div>
+                <div class="menuNav">
+                    <div class="menuNavTip icon-menuNavTip">
+                    </div>
+                </div>
+            </div>
+            <div id="headerWhiteBg" class="headerSiteMaskWhiteBg" style="height: 2.25rem; display: none;">
+            </div>
+            <div id="headerBg" class="headerSiteMaskBg" style="height: 2.25rem; display: none;">
+            </div>
+            <div id="webHeader" class="webHeader webHeaderBg">
+                <div id="header" class="header" style="padding: 0px;">
+                    <span class="pageLogo   " style="display: none; height: 41px; width: 41px;" id="pageLogo" sid="0" pw="160" ph="160">
+                        <img class="logo" src="mfarm_files/qjt_logo.png">
+                        <!-- <div id="pageLogoImg" class="logoImg " style="background-image:url(http://2.ss.faisys.com/image/no-pic.jpg);background-size: contain;background-position: center;background-repeat: no-repeat;">
               </div> -->
-            </span>
-            <span class="pageTitle" id="pageTitle" style="max-width: 365px;">
-              齐聚田网络农场【区块链农业】
-            </span>
-          </div>
+                    </span>
+                    <span class="pageTitle" id="pageTitle" style="max-width: 365px;">
+                        齐聚田网络农场【云农业】
+                    </span>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div id="webContainerBox" class="webContainerBox">
-        <div id="webModuleContainer" class="webModuleContainer" style="overflow: hidden;">
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="mfarm_files/timg2.jpeg"></div>
-            <div class="swiper-slide"><img src="mfarm_files/timg3.jpeg"></div>
-            <div class="swiper-slide"><img src="mfarm_files/timg4.jpeg"></div>
-            <div class="swiper-slide"><img src="mfarm_files/timg5.jpeg"></div>
-            <div class="swiper-slide"><img src="mfarm_files/timg6.jpeg"></div>
-            <div class="swiper-slide"><img src="mfarm_files/timg7.jpeg"></div>
-            <div class="swiper-slide"><img src="mfarm_files/timg8.jpeg"></div>
-            <div class="swiper-slide"><img src="mfarm_files/timg9.jpeg"></div>
-          </div>
-         <div class="swiper-pagination"></div>
-       </div>
-       <script type="text/javascript" src="mfarm_files/swiper.js"></script>
-          <div id="module308" _headerhiden="1" class="form Handle template1005 formStyle31 moduleStyle9"
-          _autoheight="1" _height="0">
-            <div style="display:none;" _bannerautoheight="1" class="formBannerTitle formBannerTitle308">
-              <div class="titleLeft titleLeft308">
-              </div>
-              <div class="titleCenter titleCenter308">
-                <div class="titleText titleText308">
-                  <div class="titleTextIcon icon-titleText">
-                    &nbsp;
-                  </div>
-                  <div class="textContent">
-                  </div>
+        <div id="webContainerBox" class="webContainerBox">
+            <div id="webModuleContainer" class="webModuleContainer" style="overflow: hidden;">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="mfarm_files/timg2.jpeg"></div>
+                        <div class="swiper-slide"><img src="mfarm_files/timg3.jpeg"></div>
+                        <div class="swiper-slide"><img src="mfarm_files/timg4.jpeg"></div>
+                        <div class="swiper-slide"><img src="mfarm_files/timg5.jpeg"></div>
+                        <div class="swiper-slide"><img src="mfarm_files/timg6.jpeg"></div>
+                        <div class="swiper-slide"><img src="mfarm_files/timg20.jpeg"></div>
+                        <div class="swiper-slide"><img src="mfarm_files/timg8.jpeg"></div>
+                        <div class="swiper-slide"><img src="mfarm_files/timg14.jpeg"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-              </div> 
-              <div class="titleRight titleRight308">
-              </div>
-            </div>
-            
-            <div class="logoMain">
-              <img class="logo" src="mfarm_files/qjt_logo.png">
-              <div class="logo-content">齐聚田家庭农场，致力于“区块链农业”的研究和发展，重点针对农作物产品以及衍生化产品的研究和生产，欢迎收藏关注，欢迎咨询与合作...我们将竭诚为您提供最优质的服务！！！
-              </div>
-              <div class="right">
-                <a class="tel" href="tel:15038933299" >联系方式：18101342816  【点击呼叫】</a>
-                <a class="email" href="mailto:1598240276@qq.com" >咨询邮箱：1598240276@qq.com</a>
-                <a class="wechat">微信&QQ：1598240276</a>
-              </div>
-            </div>
-            <div style="display:none;" class="formBannerMore formBannerMore308">
-            </div>
-          </div>
-          <div id="module301" class="form Handle  formStyle3 " _autoheight="1" _height="0">
-            <div _bannerautoheight="1" class="formBannerTitle formBannerTitle301"
-            style="height: 2rem;">
-              <div class="titleLeft titleLeft301">
-              </div>
-              <div class="titleCenter titleCenter301">
-                <div class="titleText titleText301">
-                  <div class="titleTextIcon icon-titleText">
-                    &nbsp;
-                  </div>
-                  <div class="textContent">
-                    区块链产品
-                  </div>
+                <script type="text/javascript" src="mfarm_files/swiper.js"></script>
+                <div id="module308" _headerhiden="1" class="form Handle template1005 formStyle31 moduleStyle9" _autoheight="1" _height="0">
+                    <div style="display:none;" _bannerautoheight="1" class="formBannerTitle formBannerTitle308">
+                        <div class="titleLeft titleLeft308">
+                        </div>
+                        <div class="titleCenter titleCenter308">
+                            <div class="titleText titleText308">
+                                <div class="titleTextIcon icon-titleText">
+                                    &nbsp;
+                                </div>
+                                <div class="textContent">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="titleRight titleRight308">
+                        </div>
+                    </div>
+                    <div class="logoMain">
+                        <img class="logo" src="mfarm_files/qjt_logo.png">
+                        <div class="logo-content">齐聚田家庭农场，致力于“云服务新农业”的研究和发展，重点针对农作物产品以及衍生化产品的研究和生产，欢迎收藏关注，欢迎咨询与合作...我们将竭诚为您提供最优质的服务！！！
+
+                        </div>
+                        <div class="right">
+                            <a class="tel" href="tel:15038933299">联系方式：18101342816 【点击呼叫】</a>
+                            <a class="email" href="mailto:1598240276@qq.com">咨询邮箱：1598240276@qq.com【点击可发邮件】</a>
+                            <a class="wechat" onclick="copyW(523388174) ">微信&QQ：523388174【点击复制】</a>
+                            <a class="wechat" onclick="copyW('ala_baobao') ">公众号：ala_baobao【点击复制】</a>
+                            <script type="text/javascript">
+                            //定义函数
+                            window.Clipboard = (function(window, document, navigator) {
+                                var textArea,
+                                    copy;
+
+                                // 判断是不是ios端
+                                function isOS() {
+                                    return navigator.userAgent.match(/ipad|iphone/i);
+                                }
+                                //创建文本元素
+                                function createTextArea(text) {
+                                    textArea = document.createElement('textArea');
+                                    textArea.innerHTML = text;
+                                    textArea.value = text;
+                                    document.body.appendChild(textArea);
+                                }
+                                //选择内容
+                                function selectText() {
+                                    var range,
+                                        selection;
+
+                                    if (isOS()) {
+                                        range = document.createRange();
+                                        range.selectNodeContents(textArea);
+                                        selection = window.getSelection();
+                                        selection.removeAllRanges();
+                                        selection.addRange(range);
+                                        textArea.setSelectionRange(0, 999999);
+                                    } else {
+                                        textArea.select();
+                                    }
+                                }
+
+                                //复制到剪贴板
+                                function copyToClipboard() {
+                                    try {
+                                        if (document.execCommand("Copy")) {
+                                            console.log("复制成功！");
+                                        } else {
+                                            console.log("复制失败！请手动复制！");
+                                        }
+                                    } catch (err) {
+                                        console.log("复制错误！请手动复制！")
+                                    }
+                                    document.body.removeChild(textArea);
+                                }
+
+                                copy = function(text) {
+                                    createTextArea(text);
+                                    selectText();
+                                    copyToClipboard();
+                                };
+
+                                return {
+                                    copy: copy
+                                };
+                            })(window, document, navigator);
+
+                            var copyW = (s) => {
+                                // var copyTxt = document.querySelector('.wechat').attributes['data-w'];
+                                Clipboard.copy(s);
+                            }
+                            </script>
+                        </div>
+                    </div>
+                    <div style="display:none;" class="formBannerMore formBannerMore308">
+                    </div>
                 </div>
-              </div>
-              <div class="titleRight titleRight301">
-              </div>
-            </div>
-            <div class="formMiddle formMiddle301">
-              <div class="middleLeft middleLeft301">
-              </div>
-              <div class="middleCenter middleCenter301">
-                <div class="formMiddleContent formMiddleContent301 moduleContent">
-                  <div class="mProductList" id="mProductList301">
-                    <div topclassname="top1" topswitch="on" productid="8" productname="有机小麦"
-                    class="productPicListForm" id="productPicListForm8_module301">
-                      <a originalgo="pd.jsp?pid=8&amp;mid=301">
-                        <div class="tableBox" id="tableBox8_module301">
-                          <div class="tableCell tableCell-30">
-                            <img class="style3Img" src="./mfarm_files/AD0Iy9X8BBAEGAAgtKafvgUosueX-wIw4Qk4_QU!450x450.png">
-                          </div>
-                          <div class="tableCell tableCell-30">
-                            <img class="style3Img" src="./mfarm_files/timg14.jpeg">
-                          </div>
-                          <div class="tableCell tableCell-70">
-                            <div class="paramNowrap">
-                              <p class="g_link paramName">
-                                有机小麦
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="g_separator separatorLine">
-                    </div>
-                    <div topclassname="top1" topswitch="on" productid="7" productname="有机黄豆"
-                    class="productPicListForm" id="productPicListForm7_module301">
-                      <a originalgo="pd.jsp?pid=7&amp;mid=301">
-                        <div class="tableBox" id="tableBox7_module301">
-                          
-                          <div class="tableCell tableCell-30">
-                            <img class="style3Img" src="./mfarm_files/timg4.jpeg">
-                          </div>
-                          <div class="tableCell tableCell-30">
-                            <img class="style3Img" src="./mfarm_files/AD0Iy9X8BBAEGAAgsaafvgUo6P-SoAQwrgM43gE.png">
-                          </div>
-                          <div class="tableCell tableCell-70">
-                            <div class="paramNowrap">
-                              <p class="g_link paramName">
-                                有机黄豆
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-<div topclassname="top1" topswitch="on" productid="7" productname="有机花生"
-                    class="productPicListForm" id="productPicListForm7_module301">
-                      <a originalgo="pd.jsp?pid=7&amp;mid=301">
-                        <div class="tableBox" id="tableBox7_module301">
-                          
-                          <div class="tableCell tableCell-30">
-                            <img class="style3Img" src="./mfarm_files/timg11.jpeg">
-                          </div>
-                          <div class="tableCell tableCell-30">
-                            <img class="style3Img" src="./mfarm_files/timg12.jpeg">
-                          </div>
-                          <div class="tableCell tableCell-30">
-                            <img class="style3Img" src="./mfarm_files/timg13.jpeg">
-                          </div>
-                          <div class="tableCell tableCell-70">
-                            <div class="paramNowrap">
-                              <p class="g_link paramName">
-                                有机花生
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-<div topclassname="top1" topswitch="on" productid="7" productname="有机红薯"
-                    class="productPicListForm" id="productPicListForm7_module301">
-                      <a originalgo="pd.jsp?pid=7&amp;mid=301">
-                        <div class="tableBox" id="tableBox7_module301">
-                          
-                          <div class="tableCell tableCell-30">
-                            <img class="style3Img" src="./mfarm_files/timg7.jpeg">
-                          </div>
-                          <div class="tableCell tableCell-30">
-                            <img class="style3Img" src="./mfarm_files/timg8.jpeg">
-                          </div>
-                          <div class="tableCell tableCell-70">
-                            <div class="paramNowrap">
-                              <p class="g_link paramName">
-                                有机红薯
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-
-<div topclassname="top1" topswitch="on" productid="7" productname="有机玉米"
-                    class="productPicListForm" id="productPicListForm7_module301">
-                      <a originalgo="pd.jsp?pid=7&amp;mid=301">
-                        <div class="tableBox" id="tableBox7_module301">
-                          
-                          <div class="tableCell tableCell-30">
-                            <img class="style3Img" src="./mfarm_files/timg9.jpeg">
-                          </div>
-                          <div class="tableCell tableCell-30">
-                            <img class="style3Img" src="./mfarm_files/timg15.jpeg">
-                          </div>
-                          <div class="tableCell tableCell-30">
-                            <img class="style3Img" src="./mfarm_files/timg16.jpeg">
-                          </div>
-                          <div class="tableCell tableCell-30">
-                            <img class="style3Img" src="./mfarm_files/timg5.jpeg">
-                          </div>
-                          <div class="tableCell tableCell-70">
-                            <div class="paramNowrap">
-                              <p class="g_link paramName">
-                                有机玉米
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-<div topclassname="top1" topswitch="on" productid="7" productname="有机绿豆"
-                    class="productPicListForm" id="productPicListForm7_module301">
-                      <a originalgo="pd.jsp?pid=7&amp;mid=301">
-                        <div class="tableBox" id="tableBox7_module301">
-                          
-                          <div class="tableCell tableCell-30">
-                            <img class="style3Img" src="./mfarm_files/timg18.jpeg">
-                          </div>
-                          <div class="tableCell tableCell-30">
-                            <img class="style3Img" src="./mfarm_files/timg19.jpeg">
-                          </div>
-                          <div class="tableCell tableCell-30">
-                            <img class="style3Img" src="./mfarm_files/timg17.jpeg">
-                          </div>
-                          <div class="tableCell tableCell-70">
-                            <div class="paramNowrap">
-                              <p class="g_link paramName">
-                                有机绿豆
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-
-                    <div class="g_separator separatorLine">
-                    </div>
-                    <div topclassname="top1" topswitch="on" productid="10" productname="有机红豆"
-                    class="productPicListForm" id="productPicListForm10_module301">
-                      <a originalgo="pd.jsp?pid=10&amp;mid=301">
-                        <div class="tableBox" id="tableBox10_module301">
-                          <div class="tableCell tableCell-30">
-                            <img class="style3Img" src="./mfarm_files/AD0Iy9X8BBAEGAAgoKafvgUogP65zgIwrgM43gE.png">
-                          </div>
-                          <div class="tableCell tableCell-70">
-                            <div class="paramNowrap">
-                              <p class="g_link paramName">
-                                有机红豆
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="g_separator separatorLine">
-                    </div>
-                    <div topclassname="top1" topswitch="on" productid="6" productname="中原小麦"
-                    class="productPicListForm" id="productPicListForm6_module301">
-                      <a originalgo="pd.jsp?pid=6&amp;mid=301">
-                        <div class="tableBox" id="tableBox6_module301">
-                          <div class="tableCell tableCell-30">
-                            <img class="style3Img" src="./mfarm_files/AD0Iy9X8BBACGAAgoqafvgUouN6E6AcwsgU4mgM!450x450.jpg">
-                          </div>
-                          <div class="tableCell tableCell-70">
-                            <div class="paramNowrap">
-                              <p class="g_link paramName">
-                                中原小麦
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="tableCell tableCell-30">
-                      <img class="style3Img" src="./mfarm_files/timg20.jpeg">
-                    </div>
+                <div id="module301" class="form Handle  formStyle3 " _autoheight="1" _height="0">
                     <div _bannerautoheight="1" class="formBannerTitle formBannerTitle301" style="height: 2rem;">
-              <div class="titleLeft titleLeft301">
-              </div>
-              <div class="titleCenter titleCenter301">
-                <div class="titleText titleText301">
-                  <div class="titleTextIcon icon-titleText">
-                    &nbsp;
-                  </div>
-                  <div class="textContent">
-                    欢迎合作
-                  </div>
-                </div>
-              </div>
-              <div class="titleRight titleRight301">
-              </div>
-            </div>
-            <div class="cooperation">
-              
-                    <div>1.欢迎各种农产品合作。</div>
-                    <div>2.网络农场，欢迎种植你自己的专属农作物。</div>
-                    <div>3.农家乐，欢迎前来体验生活，更有土特产美食等你来。</div>
-                    <div>4.农作物宠物，欢迎前来种植你的宠物。</div>
-                    <div>5.区块链新农业</div>
-                    <div>注意：也欢迎各种类型的合作！！！</div>
-                    <div class="g_separator separatorLine">
-                    欢迎合作！！！
+                        <div class="titleLeft titleLeft301">
+                        </div>
+                        <div class="titleCenter titleCenter301">
+                            <div class="titleText titleText301">
+                                <div class="titleTextIcon icon-titleText">
+                                    &nbsp;
+                                </div>
+                                <div class="textContent">
+                                    云农场产品
+                                </div>
+                            </div>
+                        </div>
+                        <div class="titleRight titleRight301">
+                        </div>
                     </div>
-            </div>
-                  </div>
-                </div>
-              </div>
-              <div class="middleRight middleRight301">
-              </div>
-            </div>
-            <!-- <div class="formBannerMore formBannerMore301">
+                    <div class="formMiddle formMiddle301">
+                        <div class="middleLeft middleLeft301">
+                        </div>
+                        <div class="middleCenter middleCenter301">
+                            <div class="formMiddleContent formMiddleContent301 moduleContent">
+                                <div class="mProductList" id="mProductList301">
+                                    <div topclassname="top1" topswitch="on" productid="8" productname="有机小麦" class="productPicListForm" id="productPicListForm8_module301">
+                                        <a originalgo="pd.jsp?pid=8&amp;mid=301">
+                                            <div class="tableBox" id="tableBox8_module301">
+                                                <div class="tableCell tableCell-30">
+                                                    <img class="style3Img" src="./mfarm_files/AD0Iy9X8BBAEGAAgtKafvgUosueX-wIw4Qk4_QU!450x450.png">
+                                                </div>
+                                                <div class="tableCell tableCell-30">
+                                                    <img class="style3Img" src="./mfarm_files/timg14.jpeg">
+                                                </div>
+                                                <div class="tableCell tableCell-70">
+                                                    <div class="paramNowrap">
+                                                        <p class="g_link paramName">
+                                                            有机小麦
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="g_separator separatorLine">
+                                    </div>
+                                    <div topclassname="top1" topswitch="on" productid="7" productname="有机黄豆" class="productPicListForm" id="productPicListForm7_module301">
+                                        <a originalgo="pd.jsp?pid=7&amp;mid=301">
+                                            <div class="tableBox" id="tableBox7_module301">
+                                                <div class="tableCell tableCell-30">
+                                                    <img class="style3Img" src="./mfarm_files/timg4.jpeg">
+                                                </div>
+                                                <div class="tableCell tableCell-30">
+                                                    <img class="style3Img" src="./mfarm_files/AD0Iy9X8BBAEGAAgsaafvgUo6P-SoAQwrgM43gE.png">
+                                                </div>
+                                                <div class="tableCell tableCell-70">
+                                                    <div class="paramNowrap">
+                                                        <p class="g_link paramName">
+                                                            有机黄豆
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div topclassname="top1" topswitch="on" productid="7" productname="有机花生" class="productPicListForm" id="productPicListForm7_module301">
+                                        <a originalgo="pd.jsp?pid=7&amp;mid=301">
+                                            <div class="tableBox" id="tableBox7_module301">
+                                                <div class="tableCell tableCell-30">
+                                                    <img class="style3Img" src="./mfarm_files/timg11.jpeg">
+                                                </div>
+                                                <div class="tableCell tableCell-30">
+                                                    <img class="style3Img" src="./mfarm_files/timg12.jpeg">
+                                                </div>
+                                                <div class="tableCell tableCell-30">
+                                                    <img class="style3Img" src="./mfarm_files/timg13.jpeg">
+                                                </div>
+                                                <div class="tableCell tableCell-70">
+                                                    <div class="paramNowrap">
+                                                        <p class="g_link paramName">
+                                                            有机花生
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div topclassname="top1" topswitch="on" productid="7" productname="有机红薯" class="productPicListForm" id="productPicListForm7_module301">
+                                        <a originalgo="pd.jsp?pid=7&amp;mid=301">
+                                            <div class="tableBox" id="tableBox7_module301">
+                                                <div class="tableCell tableCell-30">
+                                                    <img class="style3Img" src="./mfarm_files/timg7.jpeg">
+                                                </div>
+                                                <div class="tableCell tableCell-30">
+                                                    <img class="style3Img" src="./mfarm_files/timg8.jpeg">
+                                                </div>
+                                                <div class="tableCell tableCell-70">
+                                                    <div class="paramNowrap">
+                                                        <p class="g_link paramName">
+                                                            有机红薯
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div topclassname="top1" topswitch="on" productid="7" productname="有机玉米" class="productPicListForm" id="productPicListForm7_module301">
+                                        <a originalgo="pd.jsp?pid=7&amp;mid=301">
+                                            <div class="tableBox" id="tableBox7_module301">
+                                                <div class="tableCell tableCell-30">
+                                                    <img class="style3Img" src="./mfarm_files/timg9.jpeg">
+                                                </div>
+                                                <div class="tableCell tableCell-30">
+                                                    <img class="style3Img" src="./mfarm_files/timg15.jpeg">
+                                                </div>
+                                                <div class="tableCell tableCell-30">
+                                                    <img class="style3Img" src="./mfarm_files/timg16.jpeg">
+                                                </div>
+                                                <div class="tableCell tableCell-30">
+                                                    <img class="style3Img" src="./mfarm_files/timg5.jpeg">
+                                                </div>
+                                                <div class="tableCell tableCell-70">
+                                                    <div class="paramNowrap">
+                                                        <p class="g_link paramName">
+                                                            有机玉米
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div topclassname="top1" topswitch="on" productid="7" productname="有机绿豆" class="productPicListForm" id="productPicListForm7_module301">
+                                        <a originalgo="pd.jsp?pid=7&amp;mid=301">
+                                            <div class="tableBox" id="tableBox7_module301">
+                                                <div class="tableCell tableCell-30">
+                                                    <img class="style3Img" src="./mfarm_files/timg18.jpeg">
+                                                </div>
+                                                <div class="tableCell tableCell-30">
+                                                    <img class="style3Img" src="./mfarm_files/timg19.jpeg">
+                                                </div>
+                                                <div class="tableCell tableCell-30">
+                                                    <img class="style3Img" src="./mfarm_files/timg17.jpeg">
+                                                </div>
+                                                <div class="tableCell tableCell-70">
+                                                    <div class="paramNowrap">
+                                                        <p class="g_link paramName">
+                                                            有机绿豆
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="g_separator separatorLine">
+                                    </div>
+                                    <div topclassname="top1" topswitch="on" productid="10" productname="有机红豆" class="productPicListForm" id="productPicListForm10_module301">
+                                        <a originalgo="pd.jsp?pid=10&amp;mid=301">
+                                            <div class="tableBox" id="tableBox10_module301">
+                                                <div class="tableCell tableCell-30">
+                                                    <img class="style3Img" src="./mfarm_files/AD0Iy9X8BBAEGAAgoKafvgUogP65zgIwrgM43gE.png">
+                                                </div>
+                                                <div class="tableCell tableCell-70">
+                                                    <div class="paramNowrap">
+                                                        <p class="g_link paramName">
+                                                            有机红豆
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="g_separator separatorLine">
+                                    </div>
+                                    <div topclassname="top1" topswitch="on" productid="6" productname="中原小麦" class="productPicListForm" id="productPicListForm6_module301">
+                                        <a originalgo="pd.jsp?pid=6&amp;mid=301">
+                                            <div class="tableBox" id="tableBox6_module301">
+                                                <div class="tableCell tableCell-30">
+                                                    <img class="style3Img" src="./mfarm_files/AD0Iy9X8BBACGAAgoqafvgUouN6E6AcwsgU4mgM!450x450.jpg">
+                                                </div>
+                                                <div class="tableCell tableCell-70">
+                                                    <div class="paramNowrap">
+                                                        <p class="g_link paramName">
+                                                            中原小麦
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="tableCell tableCell-30">
+                                        <img class="style3Img" src="./mfarm_files/timg20.jpeg">
+                                    </div>
+                                    <div _bannerautoheight="1" class="formBannerTitle formBannerTitle301" style="height: 2rem;">
+                                        <div class="titleLeft titleLeft301">
+                                        </div>
+                                        <div class="titleCenter titleCenter301">
+                                            <div class="titleText titleText301">
+                                                <div class="titleTextIcon icon-titleText">
+                                                    &nbsp;
+                                                </div>
+                                                <div class="textContent">
+                                                    欢迎合作
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="titleRight titleRight301">
+                                        </div>
+                                    </div>
+                                    <div class="cooperation">
+                                        <div>1.欢迎各种农产品合作。</div>
+                                        <div>2.网络农场，欢迎种植你自己的专属农作物。</div>
+                                        <div>3.农家乐，欢迎前来体验生活，更有土特产美食等你来。</div>
+                                        <div>4.农作物宠物，欢迎前来种植你的宠物。</div>
+                                        <div>5.区块链新农业</div>
+                                        <div>注意：也欢迎各种类型的合作！！！</div>
+                                        <div class="g_separator separatorLine">
+                                            欢迎合作！！！
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="middleRight middleRight301">
+                        </div>
+                    </div>
+                    <!-- <div class="formBannerMore formBannerMore301">
               <a class="titleMoreLink titleMoreLink301" originalgo="pr.jsp?moduleId=301">
                 <span class="titleMoreIcon icon-titleMore titleMoreIcon301">
                   &nbsp;
@@ -434,64 +545,62 @@
                 </span>
               </a>
             </div> -->
-          </div>
-        </div>
-      </div>
-      <div id="webFooterBox" class="webFooterBox  ">
-        <!--图片详情Div -->
-        <div id="webFooter" class="webFooter">
-          <div id="footer" class="footer">
-            <div class="bottomdiv">
-              <div class="bottom">
-                <div class="backtop" onclick="Mobi.scrollToTop(&quot;webContainerBox&quot;)">
-                点击回到顶部 Top
-                  <b>
-                  </b>
                 </div>
-              </div>
             </div>
-            <div class="technical">
-              <div class="technicalSupport">
-                <font face="Arial">
-                  ©
-                </font>
-                2017&nbsp;齐聚田家庭农场&nbsp;版权所有
-              </div>
-              <div class="technicalSupport">
-                <a  href="tel:15038933299">一键呼叫</a>
-                <a  href="sms:18101342816">一键短信</a>
-              </div>
-              <div class="technicalSupport hongbao" id="hongbao">
-                <a  href="down/hongbao.apk">一键下载微信抢红包软件</a>
-              </div>
+        </div>
+        <div id="webFooterBox" class="webFooterBox  ">
+            <!--图片详情Div -->
+            <div id="webFooter" class="webFooter">
+                <div id="footer" class="footer">
+                    <div class="bottomdiv">
+                        <div class="bottom">
+                            <div class="backtop" onclick="Mobi.scrollToTop(&quot;webContainerBox&quot;)">
+                                点击回到顶部 Top
+                                <b>
+                                </b>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="technical">
+                        <div class="technicalSupport">
+                            <font face="Arial">
+                                ©
+                            </font>
+                            2017&nbsp;齐聚田家庭农场&nbsp;版权所有
+                        </div>
+                        <div class="technicalSupport">
+                            <a href="tel:15038933299">一键呼叫</a>
+                            <a href="sms:18101342816">一键短信</a>
+                        </div>
+                        <div class="technicalSupport hongbao" id="hongbao">
+                            <a href="down/hongbao.apk">一键下载微信抢红包软件</a>
+                        </div>
+                        <div class="technicalSupport music">
+                            <a href="music.html">点击去听抖音神曲[可下载]</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+            <style id="mobiStyleService" type="text/css">
+            </style>
+            <div id="webCustomerServiceBox" class="webCustomerServiceBox" style="display: none;">
+                <div class="customerServiceDiv" id="customerServiceDiv">
+                </div>
+            </div>
+            <div id="fullScreenDivCotainer" class="fullScreenDivCotainer form">
+            </div>
         </div>
-        <style id="mobiStyleService" type="text/css">
-        </style>
-        <div id="webCustomerServiceBox" class="webCustomerServiceBox" style="display: none;">
-          <div class="customerServiceDiv" id="customerServiceDiv">
-          </div>
+        <!--设置网站的背景颜色 start-->
+        <div class="webBackgroundBox  ">
+            <div id="webBodyBackground" class="webBackground ">
+            </div>
+            <div id="navExistOffPanel" class="navExistOffPanel">
+            </div>
         </div>
-        <div id="fullScreenDivCotainer" class="fullScreenDivCotainer form">
-        </div>
-      </div>
-      <!--设置网站的背景颜色 start-->
-      <div class="webBackgroundBox  ">
-        <div id="webBodyBackground" class="webBackground ">
-        </div>
-        <div id="navExistOffPanel" class="navExistOffPanel">
-        </div>
-      </div>
-      <!--设置网站的背景颜色 end-->
+        <!--设置网站的背景颜色 end-->
     </div>
     <div class="webRight">
-    </div>
-    <div class="music">
-      <ul>
-        <li><a href="/down/抖音神曲/往后余生.mp3" download="抖音神曲/往后余生.mp3">抖音神曲/往后余生</a></li>
-        <li><a href="/down/抖音神曲/双子星.mp3" download="抖音神曲/双子星.mp3">抖音神曲/双子星</a></li>
-      </ul>
     </div>
     <script type="text/javascript" charset="utf-8" src="./mfarm_files/jqmobi.min.js">
     </script>
@@ -502,7 +611,7 @@
     <script type="text/javascript" src="./mfarm_files/2052.min.js">
     </script>
     <script type="text/javascript">
-     var mySwiper = new Swiper('.swiper-container', {
+    var mySwiper = new Swiper('.swiper-container', {
         autoplay: 3000,
         loop: true,
         grabCursor: true,
@@ -511,125 +620,101 @@
         paginationClickable: true,
         speed: 500
     });
-// ------微信分享------------
+    // ------微信分享------------
     if (wx) {
-      wx.config({
-        debug: false,
-        appId: 'wx8cd5624eda2c0a61',
-        timestamp: parseInt(Date.now()/1000),
-        nonceStr: "4d666b8e-d072-4e0f-a724-380a937969ca",
-        signature: "229d14cf393f1722151ac0c1ae5eff6382fe97e0",
-        jsApiList: ["onMenuShareTimeline", "onMenuShareAppMessage", "onMenuShareQQ", "onMenuShareWeibo"]
-      });
+        wx.config({
+            debug: false,
+            appId: 'wx8cd5624eda2c0a61',
+            timestamp: parseInt(Date.now() / 1000),
+            nonceStr: "4d666b8e-d072-4e0f-a724-380a937969ca",
+            signature: "229d14cf393f1722151ac0c1ae5eff6382fe97e0",
+            jsApiList: ["onMenuShareTimeline", "onMenuShareAppMessage", "onMenuShareQQ", "onMenuShareWeibo"]
+        });
 
-      var shareData = {
-        title: '齐聚田',//shareData.title, // 分享标题
-        content: '齐聚田网络家庭农场，致力于农作物产品以及衍生化产品的研究工作，欢迎收藏关注，欢迎咨询与合作...',//shareData.content, // 分享描述
-        // link: shareData.link, // 分享链接
-        pics: ['mfarm_files/qjt_logo.png'],//shareData.pics[0], // 分享图标
-        type: '', // 分享类型,music、video或link，不填默认为link
-        link: '//2013yulong.github.io/qijutian/?from=singlemessage#hongbao' // 如果type是music或video，则要提供数据链接，默认为空
-      }
-      var getShareon = function (data) {
-        console.log(data);
-        wx.ready(function () {
-          // 兼容方案 如果 shareon 挂掉了,使用默认图片
-          var imagesUrl = 'mfarm_files/qjt_logo.png';//shareData.WeiXinMoments.pics[0] || 
-          wx.onMenuShareTimeline({
-            title: shareData.content, // 分享标题
-            link: shareData.link, // 分享链接
-            imgUrl: imagesUrl,
-            success: function () {
-              // 用户确认分享后执行的回调函数
-            },
-            cancel: function () {
-              // 用户取消分享后执行的回调函数
-            }
-          });
-          wx.onMenuShareAppMessage({
-            title: shareData.title, // 分享标题
-            desc: shareData.content, // 分享描述
-            link: shareData.link, // 分享链接
-            imgUrl: shareData.pics[0], // 分享图标
+        var shareData = {
+            title: '齐聚田', //shareData.title, // 分享标题
+            content: '齐聚田网络家庭农场，致力于农作物产品以及衍生化产品的研究工作，欢迎收藏关注，欢迎咨询与合作...', //shareData.content, // 分享描述
+            // link: shareData.link, // 分享链接
+            pics: ['mfarm_files/qjt_logo.png'], //shareData.pics[0], // 分享图标
             type: '', // 分享类型,music、video或link，不填默认为link
-            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
-            success: function () {
-              // 用户确认分享后执行的回调函数
-            },
-            cancel: function () {
-              // 用户取消分享后执行的回调函数
-            }
-          });
-          wx.onMenuShareQQ({
-            title: shareData.title, // 分享标题
-            desc: shareData.content, // 分享描述
-            link: shareData.link, // 分享链接
-            imgUrl: shareData.pics[0], // 分享图标
-            success: function () {
-              // 用户确认分享后执行的回调函数
-            },
-            cancel: function () {
-              // 用户取消分享后执行的回调函数
-            }
-          });
-          wx.onMenuShareWeibo({
-            title: shareData.title, // 分享标题
-            desc: shareData.content, // 分享描述
-            link: shareData.link, // 分享链接
-            imgUrl: shareData.pics[0], // 分享图标
-            success: function () {
-              // 用户确认分享后执行的回调函数
-            },
-            cancel: function () {
-              // 用户取消分享后执行的回调函数
-            }
-          });
-        });
-        wx.error(function (res) {
-          console.log('-wechat-error',res);
-        });
-      }
-      getShareon(shareData);
+            link: '//2013yulong.github.io/qijutian/?from=singlemessage#hongbao' // 如果type是music或video，则要提供数据链接，默认为空
+        }
+        var getShareon = function(data) {
+            console.log(data);
+            wx.ready(function() {
+                // 兼容方案 如果 shareon 挂掉了,使用默认图片
+                var imagesUrl = 'mfarm_files/qjt_logo.png'; //shareData.WeiXinMoments.pics[0] || 
+                wx.onMenuShareTimeline({
+                    title: shareData.content, // 分享标题
+                    link: shareData.link, // 分享链接
+                    imgUrl: imagesUrl,
+                    success: function() {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function() {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+                wx.onMenuShareAppMessage({
+                    title: shareData.title, // 分享标题
+                    desc: shareData.content, // 分享描述
+                    link: shareData.link, // 分享链接
+                    imgUrl: shareData.pics[0], // 分享图标
+                    type: '', // 分享类型,music、video或link，不填默认为link
+                    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                    success: function() {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function() {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+                wx.onMenuShareQQ({
+                    title: shareData.title, // 分享标题
+                    desc: shareData.content, // 分享描述
+                    link: shareData.link, // 分享链接
+                    imgUrl: shareData.pics[0], // 分享图标
+                    success: function() {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function() {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+                wx.onMenuShareWeibo({
+                    title: shareData.title, // 分享标题
+                    desc: shareData.content, // 分享描述
+                    link: shareData.link, // 分享链接
+                    imgUrl: shareData.pics[0], // 分享图标
+                    success: function() {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function() {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+            });
+            wx.error(function(res) {
+                console.log('-wechat-error', res);
+            });
+        }
+        getShareon(shareData);
     }
-   
     </script>
     <div id="cli_dialog_div">
     </div>
-    <div id="haloword-lookup" class="ui-widget-content ui-draggable">
-      <div id="haloword-title">
-        <span id="haloword-word">
-        </span>
-        <a herf="#" id="haloword-pron" class="haloword-button" title="发音">
-        </a>
-        <audio id="haloword-audio">
-        </audio>
-        <div id="haloword-control-container">
-          <a herf="#" id="haloword-add" class="haloword-button" title="加入单词表">
-          </a>
-          <a herf="#" id="haloword-remove" class="haloword-button" title="移出单词表">
-          </a>
-          <a originalgo="index.jsp#" id="haloword-open" class="haloword-button"
-          title="查看单词详细释义" target="_blank">
-          </a>
-          <a herf="#" id="haloword-close" class="haloword-button" title="关闭查询窗">
-          </a>
-        </div>
-        <br style="clear: both;">
-      </div>
-      <div id="haloword-content">
-      </div>
-    </div>
-    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan%20id%3D%27cnzz_stat_icon_1261570930%27%20style%3D%27display%3Anone%3B%27%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261570930' type='text/javascript'%3E%3C/script%3E"));
-    
-      var _hmt = _hmt || [];
-      (function() {
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan%20id%3D%27cnzz_stat_icon_1261570930%27%20style%3D%27display%3Anone%3B%27%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261570930' type='text/javascript'%3E%3C/script%3E"));
+
+    var _hmt = _hmt || [];
+    (function() {
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?90a8a14c03d4bbdc506ff4cd67b30291";
-        var s = document.getElementsByTagName("script")[0]; 
+        var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
-      })();
+    })();
     </script>
-    
-  </body>
+</body>
 
 </html>
